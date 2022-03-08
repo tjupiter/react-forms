@@ -1,13 +1,197 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fire Sans', Helvetica;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem 0;
+
+}
+
+.form--container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.form--message {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: justify;
+  font-weight: bolder;
+  background-color: rgb(197, 207, 238);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  z-index: 2;
+  position: relative;
+  box-shadow: 1px 2px 1px black;
+}
+
+form {
+  width: 85%;
+  margin: -3rem auto 1rem;
+  padding: 4rem 2rem 2rem;
+  background-color: rgb(180, 211, 253);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 1px gray;
+}
+
+.form--input-container {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-bottom: 1rem;
+}
+
+.form--input-container label {
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+.form--input-container input,
+.form--input-container textarea {
+  padding: .5rem .2rem;
+  text-indent: .3rem;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+.form--input-container input:focus,
+.form--input-container textarea:focus,
+.form--language-selector select:focus {
+  outline: none;
+  border: 3px solid orange;
+}
+
+.form--checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.form--checkbox-container input {
+  margin-right: .3rem;
+}
+
+.form--submit-btn {
+  cursor: pointer;
+  background-color: rgb(208, 230, 247);
+  padding: .5rem 2rem;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 1rem;
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+
+fieldset {
+  padding: .4rem;
+  border-radius: 12px;
+  border: 1px solid rgb(63, 40, 101);
+  margin-bottom: 1.5rem;
+}
+
+fieldset legend {
+  padding: 0 .3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+fieldset input {
+  margin-bottom: .2rem;
+}
+
+.newsletter--radio-btn-container {
+  margin-bottom: .5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: .3rem;
+}
+
+.form--language-selector {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.form--language-selector label {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form--language-selector select {
+  width: 50%;
+  padding: .3rem;
+  border-radius: 12px;
+}
+
+.form--submit-btn {
+  background-color: azure;
+  font-size: 1rem;
+}
+
+.form--submit-btn:hover {
+  background-color: rgb(46, 108, 159);
+  color: azure;
+}
+
+.form--submit-btn:focus {
+  outline: none;
+  border: 3px solid orange;
+}
+
+@media screen and (min-width: 900px) {
+  header h1 {
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+
+  .form--message {
+    max-width: 500px;
+    font-size: 1.6rem;
+  }
+
+  fieldset {
+    max-width: 500px;
+  }
+
+  fieldset legend {
+    margin-bottom: .5rem;
+  }
+
+  fieldset label {
+    font-size: 1rem;
+  }
+
+  .newsletter--radio-btn-container {
+    flex-direction: row;
+  }
+
+  .newsletter--selector-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
